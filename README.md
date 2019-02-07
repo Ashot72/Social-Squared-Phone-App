@@ -8,7 +8,7 @@ The app supports different languages. The phone app is demonstrated in conjuncti
 
 Go to [Social Square Phone App Video](https://lightningtools.wistia.com/medias/6pyfwttevi) page
 
-Go to [How to run Social Squared Phone App](https://github.com/Ashot72/Social-Squared-Phone-App/index.html) page 
+Go to [How to run Social Squared Phone App](https://ashot72.github.io/Social-Squared-Phone-App/) page 
 
 
 
