@@ -1,0 +1,1051 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+a:link, span.MsoHyperlink
+	{color:#0563C1;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#954F72;
+	text-decoration:underline;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link="#0563C1" vlink="#954F72">
+
+<div class=WordSection1>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span
+style='font-size:14.0pt;line-height:107%'>Social Squared Client-Side Web Part
+(SPFx) Phone Application</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Video link: <span
+class=MsoHyperlink><a href="https://lightningtools.wistia.com/medias/6pyfwttevi"
+target="_blank">https://lightningtools.wistia.com/medias/6pyfwttevi</a></span></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Git
+Repository: <a href="https://github.com/Ashot72/Social-Squared-Phone-App"
+target="_blank">https://github.com/Ashot72/Social-Squared-Phone-App</a> </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>The phone
+app is built with Quasar Framework which is based on Vue.js <span
+class=MsoHyperlink><a href="https://quasar-framework.org/" target="_blank">https://quasar-framework.org/</a></span></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>With the
+same codebase you can develop Responsive Single Page Apps, Server-side Render
+Apps, Regressive Web Apps, Mobile Apps, Electron Apps.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>The phone app
+is still in development and we implemented the layout and login, forums, topics
+pages only. </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>You will also
+see how to authenticate the app via Azure Active Directory. It just takes a
+minute!!! You register the app, grant required permissions and that’s it! </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>The phone
+app is ready to go and it is pretty fast!  </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>You can
+develop with any Quasar theme, regardless of the platform you are building
+(Android, IOS). It offers two themes out of box:</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Material and
+IOS.  We can test IOS theme on Android during development which is good as it
+is not always easy to test apps on IOS (watch the video).</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>The app
+supports different languages.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>We will
+demonstrate the phone app in conjunction with Social Squared client-side web
+part (SPFx) which also works in Microsoft Teams.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1006 height=492 id="Picture 1"
+src="index_files/image001.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 1</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>We defined
+some forums and topics.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1008 height=463 id="Picture 3"
+src="index_files/image002.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 2</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Our web part
+can also work in Microsoft Teams.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=984 height=501 id="Picture 4"
+src="index_files/image003.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 3</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>First thing
+that we should do in order to access the phone app is to specify SharePoint
+Site URL where the web part is hosted and registered app’s application id.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Let’s start
+from Application ID and for that we should register an application via Azure
+Active Directory.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1011 height=529 id="Picture 7"
+src="index_files/image004.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 4</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Navigate <i>Admin</i>
+area of the tenant.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=974 height=514 id="Picture 8"
+src="index_files/image005.jpg"><span style='font-size:14.0pt;line-height:107%'> </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 5</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Select <i>Azure
+Active Directory.</i></span></p>
+
+<p class=MsoNormal><i><span style='font-size:14.0pt;line-height:107%'> </span></i></p>
+
+<p class=MsoNormal><img border=0 width=941 height=402 id="Picture 9"
+src="index_files/image006.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 6</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Select <i>Azure
+Active Directory </i>on azure portal this time.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=952 height=539 id="Picture 10"
+src="index_files/image007.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 7</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Click on <i>App
+registration.</i></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=992 height=420 id="Picture 11"
+src="index_files/image008.png"><span style='font-size:14.0pt;line-height:107%'> </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 8</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Click on <i>New
+application registration.</i></span></p>
+
+<p class=MsoNormal><i><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></i></p>
+
+<p class=MsoNormal><img border=0 width=1033 height=616 id="Picture 12"
+src="index_files/image009.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 9</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Now you
+specify <i>Name</i>, <i>Application type</i> and <i>Redirect URI</i>. <i>Application
+type </i>is Native and <i>Redirect URI </i><b>must</b> be <span
+class=MsoHyperlink><a href="http://dummy">http://dummy</a></span></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1055 height=536 id="Picture 13"
+src="index_files/image010.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 10</span></p>
+
+<p class=MsoNormal><i><span style='font-size:14.0pt;line-height:107%'>SSPhoneDemo</span></i><span
+style='font-size:14.0pt;line-height:107%'> native app was created. </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1056 height=572 id="Picture 14"
+src="index_files/image011.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 11</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>We can see
+that there are no admin consented permissions found for the application after
+the app creation.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1082 height=557 id="Picture 15"
+src="index_files/image012.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 12</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Navigate the
+<i>settings</i> page.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1089 height=548 id="Picture 16"
+src="index_files/image013.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 13</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Select <i>Required
+permissions</i></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1091 height=542 id="Picture 17"
+src="index_files/image014.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 14</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Click on <i>Add.</i></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1115 height=585 id="Picture 18"
+src="index_files/image015.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 15</span></p>
+
+<p class=MsoNormal><i><span style='font-size:14.0pt;line-height:107%'>Select an
+API</span></i></p>
+
+<p class=MsoNormal><i><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></i></p>
+
+<p class=MsoNormal><img border=0 width=1143 height=597 id="Picture 20"
+src="index_files/image016.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 16</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Select <i>Office
+365 SharePoint Online</i>.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1142 height=655 id="Picture 21"
+src="index_files/image017.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 17</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Select two
+permissions; <i>Read user profiles</i> and <i>Read and write items in all site
+collections</i>. </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1146 height=672 id="Picture 22"
+src="index_files/image018.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 18</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Click <i>Done</i>.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1145 height=594 id="Picture 23"
+src="index_files/image019.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 19</span></p>
+
+<p class=MsoNormal><i><span style='font-size:14.0pt;line-height:107%'>Grant
+Permissions</span></i><span style='font-size:14.0pt;line-height:107%'>.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1155 height=644 id="Picture 24"
+src="index_files/image020.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 20</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>We see the specified
+permissions under Office 365 SharePoint Online and <i>Sign in read user profile
+permission </i>by default in Windows Azure Active Directory. </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>We leave that
+permission as it is as we must specify one permission anyway. As an
+administrator you can grant consent on behalf of all users</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>in this
+directory, ensuring that users will not be required to consent when using the
+application.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1178 height=610 id="Picture 27"
+src="index_files/image021.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 21</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Now, it is
+time to run our phone app. SharePoint site URL (Figure 3) was the first thing to
+input and it is <span class=MsoHyperlink><a
+href="https://lightningtoolsdev.sharepoint.com/sites/PhoneDemo">https://lightningtoolsdev.sharepoint.com/sites/PhoneDemo</a></span></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>in our case.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1181 height=613 id="Picture 29"
+src="index_files/image022.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 22</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Set the
+value.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1182 height=570 id="Picture 31"
+src="index_files/image023.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 23</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Application
+ID is the app id for newly created <i>SSPhoneDemo</i> application.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1192 height=566 id="Picture 32"
+src="index_files/image024.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 24</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Note,
+Application ID input field can either hide or show the characters entered by
+the user via clickable icon to toggle the input.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1195 height=490 id="Picture 2"
+src="index_files/image025.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Social
+Squared SPFx  will define a new text field for Application ID so the phone app users
+can get it from there.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1212 height=626 id="Picture 33"
+src="index_files/image026.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 25</span></p>
+
+<p class=MsoNormal><i><span style='font-size:14.0pt;line-height:107%'>Remember</span></i><span
+style='font-size:14.0pt;line-height:107%'> option persists user’s settings and no
+need to specify them again each time the app is launched. </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Each time
+you change a character in any of the input fields the remember option is grayed
+out which means that the settings will not be persisted.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Make sure to
+check remember option after changing an input character. </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1217 height=718 id="Picture 34"
+src="index_files/image027.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 26</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>You are
+navigated to Microsoft’s <i>Sign In</i> page. Let’s go back this time.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1225 height=621 id="Picture 35"
+src="index_files/image028.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 27</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>The error
+message is <i>Acquire Token User cancelled the flow. </i>That is because we decided
+to go back instead of login. This is how errors are displayed and you have </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>to
+explicitly dismiss the alert by tapping <i>close</i>.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1231 height=634 id="Picture 37"
+src="index_files/image029.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 28</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Set your
+email and tap <i>Next</i>.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1247 height=656 id="Picture 39"
+src="index_files/image030.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 29</span></p>
+
+<p class=MsoNormal><i><span style='font-size:14.0pt;line-height:107%'>Enter
+password</span></i><span style='font-size:14.0pt;line-height:107%'> and <i>Sign
+In</i>.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1251 height=669 id="Picture 40"
+src="index_files/image031.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 30</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>A user
+redirected to forums page after Sign in. <i>Forums</i> is the first tab. </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1242 height=663 id="Picture 42"
+src="index_files/image032.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 31</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Tab menu
+icon located on right-top corner to bring up user’s profile panel.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1245 height=607 id="Picture 43"
+src="index_files/image033.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 32</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>That is the
+same info on Office 365 <i>My accounts</i> panel.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1256 height=607 id="Picture 45"
+src="index_files/image034.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 33</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Forum’s <i>Last
+Post</i> section is not expanded by default on the phone app. A user can either
+expand or collapse it by tapping the arrow. Only one</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>section can
+be expanded at a time and previously opened section will collapse.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1231 height=644 id="Picture 46"
+src="index_files/image035.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 34</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Pull to
+refresh the page and forums will be loaded from the server.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1236 height=712 id="Picture 47"
+src="index_files/image036.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 35</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>When data
+are retrieved form the server then a loading bar (like YouTube) is displayed
+telling the user that there is an Ajax call in progress. What we do first</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>is loading forums
+from the server and after that load pictures asynchronously. This means that
+users may first see the forum’s creator initial letter capitalized</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>(e.g. L for
+Lightning Tools admin, T for Test user2) then the actual picture.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1229 height=657 id="Picture 48"
+src="index_files/image037.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 36</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Forums are loaded,
+last poster’s picture is loaded too but red loading line is not complete. This
+means that other last posters’ pictures are still loading.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Loading
+pictures after the forums is convenient as a user can go through the forums
+while pictures are loading.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1259 height=654 id="Picture 50"
+src="index_files/image038.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 37 </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Both header
+and footer are collapsed (similar to LinkedIn native app) while scrolling up the
+page (compare to Figure 36). This is good mobile experience as there is more
+room to breathe.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1254 height=656 id="Picture 52"
+src="index_files/image039.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 38</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Forums’ <i>back
+to top</i> button allows users to smoothly scroll back to the top of the page.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1264 height=594 id="Picture 53"
+src="index_files/image040.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 39</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'> A user can
+navigate to other pages to view <i>Popular Topics</i>, <i>Recent Activities</i>
+etc. by means of Social Squared SPFx sidebar icons. Phone app renders them as
+tabs.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1256 height=629 id="Picture 54"
+src="index_files/image041.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 40</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>We navigated
+from forums to topics page. It functions like forums page. Not all pictures have
+been loaded yet. There are still in progress.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1221 height=663 id="Picture 55"
+src="index_files/image042.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 41</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>We define <i>Back
+to top</i> differently on topics’ page as Add<i> new topic </i>red button already
+occupied the space. </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1263 height=639 id="Picture 56"
+src="index_files/image043.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 42</span></p>
+
+<p class=MsoNormal><i><span style='font-size:14.0pt;line-height:107%'>Latest
+Post</span></i><span style='font-size:14.0pt;line-height:107%'> section behaves
+like forums’ <i>Last Post </i>section.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1276 height=580 id="Picture 60"
+src="index_files/image044.jpg"> </p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 43</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>If signed in
+user does not have a picture specified then phone app will show the initial letter
+capitalized like T for Test User 2.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1261 height=666 id="Picture 61"
+src="index_files/image045.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 44</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>It is
+convenient to navigate to previous page just by tapping the icon located on top-left
+corner. You are on topics page and see forums icon to navigate to.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1258 height=655 id="Picture 62"
+src="index_files/image046.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 45</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Here we navigated
+from topics page to posts page which is not ready yet. Users can navigate back
+to topics page by tapping left-top button.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1250 height=675 id="Picture 63"
+src="index_files/image047.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 46</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Posts page uses
+infinite scrolling like Facebook that progressively load new content as the
+user scrolls up the page.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1249 height=554 id="Picture 64"
+src="index_files/image048.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 47</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Call
+Lightning Tools directly from the app.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1251 height=622 id="Picture 65"
+src="index_files/image049.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 48</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Select an
+app to make a call.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1245 height=617 id="Picture 66"
+src="index_files/image050.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 49</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Apps allows
+you to navigate Lightning Tools web site as well.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1252 height=628 id="Picture 67"
+src="index_files/image051.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 50</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Select an
+app to open Lightning Tools web site.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1236 height=537 id="Picture 68"
+src="index_files/image052.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 51</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Let’s create
+a new forum group.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1291 height=604 id="Picture 69"
+src="index_files/image053.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 52</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Create a new
+forum under newly created forum group.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1313 height=527 id="Picture 70"
+src="index_files/image054.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 53</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Pull to
+refresh and you will see the forum on the phone and it is pretty fast!</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1303 height=738 id="Picture 71"
+src="index_files/image055.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 54</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Let’s add a
+new topic via Microsoft Teams tab.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1307 height=604 id="Picture 72"
+src="index_files/image056.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 55</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Pull to refresh
+and the topic rendered on the phone.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1311 height=598 id="Picture 73"
+src="index_files/image057.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 56</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>We created
+two topics. Now we are going to rate <i>Test Topic </i>then make sticky and
+lock.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1308 height=699 id="Picture 74"
+src="index_files/image058.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 57</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>As the topic
+is sticky it became the top one (compare to Figure 57).</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1310 height=623 id="Picture 75"
+src="index_files/image059.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 58</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Tab menu
+icon located on right-top corner to bring up user’s profile panel where <i>Logout</i>
+button<i> is located</i> (Note the user’s profile picture is not retrieved
+yet).</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1310 height=298 id="Picture 76"
+src="index_files/image060.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 59</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>As we
+already stated you can develop with any Quasar theme, regardless of the platform
+you are building (Android, IOS). Our app was built with <i>mat</i> option which
+is material</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>themes for
+Android.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1320 height=247 id="Picture 77"
+src="index_files/image061.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 60</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>This time we
+are going to build with <i>ios</i> option for IOS.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1322 height=644 id="Picture 78"
+src="index_files/image062.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 61</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>You see IOS
+login page differs from Android one (compare to Figure 3).</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><i><span style='font-size:14.0pt;line-height:107%'>Apple’s
+Flat Design vs Google’s Material Design.</span></i></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Flat design
+is free from multi-dimensional elements and makes feel like all the objects are
+laying on a single surface. Material design</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>released by
+Google can be said as a branded product with a set of well-defined guidelines
+and principles. Flat design is a less intuitive</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>design and
+users get mixed up due to excessive flatness of objects. In flat design,
+clickable elements get usually confused with non-clickable</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>icons and
+texts. </span><span style='font-size:14.0pt;line-height:107%;letter-spacing:
+-.05pt;background:white'>To overcome this problem, material design tries to
+introduce some skeuomorphism in the most simplified design. Though </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;letter-spacing:
+-.05pt;background:white'>material design looks flat, it stays
+multi-dimensional. In short, material design is an improved version of flat
+design which lays stress on the </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;letter-spacing:
+-.05pt;background:white'>minor details in terms of animations, shades and
+layers. Material design makes the product feel more intuitive when it comes to
+navigation </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%;letter-spacing:
+-.05pt;background:white'>and yet maintain its simplicity.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1321 height=625 id="Picture 79"
+src="index_files/image063.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 62</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Profile’s
+page, IOS theme.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1323 height=685 id="Picture 80"
+src="index_files/image064.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 63</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Forums page.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1325 height=727 id="Picture 81"
+src="index_files/image065.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 64</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>On Material Design
+theme we placed tabs between Layout header and page view, and on IOS theme
+between page view and Layout footer.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1314 height=565 id="Picture 82"
+src="index_files/image066.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 65</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Let’s login
+this time with <i>Test user2</i> account</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1315 height=665 id="Picture 83"
+src="index_files/image067.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 66</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>First, I tap
+remember icon to make it gray. It this mode neither SharePoint Access Info nor
+user’s login and password will persist</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>(Figure 26,
+Figure 28). We need that as we are going to sign in with another account.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1313 height=637 id="Picture 84"
+src="index_files/image068.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 67</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>As we use
+the same SharePoint Access Info, we just check <i>Remember</i> again to keep the
+specified info. So, first we unchecked remember option to remove both
+SharePoint Access Info</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>and signed
+in user’s email and password and then checked it again to keep SharePoint
+Access Info. Tap login button and Microsoft’s <i>Sign In</i> page should come
+next.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1318 height=662 id="Picture 85"
+src="index_files/image069.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 68</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>We signed in
+as Test User2.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1234 height=644 id="Picture 86"
+src="index_files/image070.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 69</span></p>
+
+<p class=MsoNormal><i><span style='font-size:14.0pt;line-height:107%'>Test
+User2</span></i><span style='font-size:14.0pt;line-height:107%'> is singed in
+and you remember that account does not have a profile picture.</span></p>
+
+<span style='font-size:14.0pt;line-height:107%;font-family:"Calibri",sans-serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1262 height=634 id="Picture 87"
+src="index_files/image071.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 70</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Our app
+supports different languages. Tap <i>settings</i> icon.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1324 height=649 id="Picture 88"
+src="index_files/image072.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 71</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Go to <i>General
+management </i>page. </span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1250 height=625 id="Picture 89"
+src="index_files/image073.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 72</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Select <i>Language
+and input</i>.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1256 height=594 id="Picture 90"
+src="index_files/image074.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 73</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Language
+setting.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1186 height=585 id="Picture 91"
+src="index_files/image075.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 74</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Add language.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1198 height=601 id="Picture 92"
+src="index_files/image076.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 75</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Select <i>Deutsch</i>.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1200 height=582 id="Picture 93"
+src="index_files/image077.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 76</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Select <i>Deutschland</i>.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1219 height=623 id="Picture 94"
+src="index_files/image078.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 77</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Select <i>Set
+as Default</i> option.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1279 height=610 id="Picture 95"
+src="index_files/image079.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 78</span></p>
+
+<p class=MsoNormal><i><span style='font-size:14.0pt;line-height:107%'>Deutsch</span></i><span
+style='font-size:14.0pt;line-height:107%'> is the first option now.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1227 height=624 id="Picture 96"
+src="index_files/image080.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 79</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>We do not
+have real entries yet; just appending DE for now.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1229 height=609 id="Picture 97"
+src="index_files/image081.png"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 80</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Forums page.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><img border=0 width=1211 height=494 id="Picture 98"
+src="index_files/image082.jpg"></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>Figure 81</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>The phone
+app in Landscape mode.</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;line-height:107%'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>
